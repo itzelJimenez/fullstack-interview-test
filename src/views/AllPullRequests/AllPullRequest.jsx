@@ -52,7 +52,7 @@ const AllPullRequest = () => {
                     <TableBody>
                         {rows?.length > 0 ? rows.map((row) => (
                         <TableRow
-                            key={row.author}
+                            key={row.title}
                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                         >
                             <TableCell component="th" scope="row">
