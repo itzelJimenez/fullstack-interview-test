@@ -1,7 +1,7 @@
 import './App.css';
 import Router from './Router/Router';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Router />

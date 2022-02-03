@@ -1,9 +1,10 @@
 import React from 'react';
 import Layout from '../Layout/Layout';
+import NotFoundPageImage from '../../assets/images/404-error-not-found-1.png'
 
 const NotFoundPage = () => (
     <Layout layoutTitle="NotFoundPage">
-      <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus, autem corporis. Debitis, facere reprehenderit accusamus inventore architecto dolor animi tempore! Officiis sapiente, et sit debitis corrupti maiores quia laborum aliquid?</h1>
+      <img src={NotFoundPageImage} />
     </Layout>
 );
 
