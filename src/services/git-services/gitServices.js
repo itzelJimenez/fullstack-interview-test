@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { apiBranchCommits, apiBranchDetails, apiBranchesUrl } from '../constants';
+import { apiBranchCommits, apiBranchDetails, apiBranchesUrl, apiGetPullRequests } from '../constants';
 
 export const axiosInstance = axios.create({baseURL: apiBranchesUrl});
 
@@ -16,5 +16,10 @@ export const getBranchDetails = async(branchName) => {
 
 export const getBranchCommits = async(branchName) => {
     const { data } = await axiosInstance.get(apiBranchCommits(branchName));
+    return data;
+}
+
+export const getPullRequests = async() => {
+    const { data } = await axiosInstance.get(apiGetPullRequests);
     return data;
 }

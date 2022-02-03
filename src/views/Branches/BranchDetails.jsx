@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -14,15 +15,15 @@ const BranchDetails = ({branchDetails}) => {
         return { commit, message, author, timestamp };
     }
 
-    const getData = () => {
+    const createRowData = () => {
         return branchDetails?.length > 0 ? branchDetails.map(element => {
             return createData(element?.sha, element?.commit?.message, element?.commit?.author?.name, element?.commit?.author?.date)
         }): [];
     }
 
     useEffect(()=> {
-        setRows(getData());
-    }, [])
+        setRows(createRowData());
+    }, [branchDetails])
 
     return (
         <TableContainer component={Paper}>

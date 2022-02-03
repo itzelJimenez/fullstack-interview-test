@@ -24,12 +24,6 @@ export const routes = [
         icon: AltRouteIcon
     },
     {
-        name: "Create Pull Request",
-        route: '/create-pull-request',
-        component: CreatePullRequest, 
-        icon: AddTaskIcon
-    },
-    {
         name: "All Pull Requests",
         route: '/all-pull-requests',
         component: AllPullRequest, 
